@@ -1,0 +1,22 @@
+torch#==1.4.0
+torchvision#==0.5.0
+pytorch-lightning#==0.7.5
+test-tube
+kornia#==0.2.0
+opencv-python#==4.2.0.34
+matplotlib
+jupyter
+
+# for mesh
+# PyMCubes
+pycollada
+trimesh
+pyglet
+
+# for point cloud
+plyfile
+open3d
+
+
+# CUDA_VISIBLE_DEVICES="6" python train.py --dataset_name llff --root_dir "../new_pigs/" --N_importance 64 --img_wh 320 320 --num_epochs 10 --batch_size 3072 --optimizer adam --lr 5e-4 --lr_scheduler steplr --decay_step 10 20 --decay_gamma 0.5 --exp_name new_epoch10 --spheric
+# CUDA_VISIBLE_DEVICES="6" python eval.py --root_dir "../new_pigs/" --dataset_name llff --scene_name new_pig_20 --img_wh 320 320 --N_importance 64 --ckpt_path ../new_epoch20.ckpt --spheric_poses
