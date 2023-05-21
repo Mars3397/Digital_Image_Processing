@@ -6,7 +6,7 @@ class Siren(nn.Module):
         super().__init__()
 
     def forward(self, x):
-        return torch.sin(x * 0.9)
+        return torch.sin(x * 1.0)
 
 class Embedding(nn.Module):
     def __init__(self, in_channels, N_freqs, logscale=True):
